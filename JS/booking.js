@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token");
 
 async function book() {
-  await fetch("https://lecturehall.onrender.com/api/bookings", {
+  await fetch("http://localhost:5000/api/bookings", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
