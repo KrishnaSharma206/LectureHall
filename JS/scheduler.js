@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token");
 
 async function schedule() {
-  const res = await fetch("http://localhost:5000/api/scheduler/auto-schedule", {
+  const res = await fetch("https://lecturehall.onrender.com/api/scheduler/auto-schedule", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

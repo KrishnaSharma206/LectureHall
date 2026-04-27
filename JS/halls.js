@@ -1,7 +1,7 @@
 const token = localStorage.getItem("token");
 
 async function addHall() {
-  await fetch("http://localhost:5000/api/halls", {
+  await fetch("https://lecturehall.onrender.com/api/halls", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -19,7 +19,7 @@ async function addHall() {
 }
 
 async function loadHalls() {
-  const res = await fetch("http://localhost:5000/api/halls", {
+  const res = await fetch("https://lecturehall.onrender.com/api/halls", {
     headers: { "Authorization": token }
   });
 
