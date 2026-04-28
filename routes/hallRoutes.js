@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Hall = require("../models/Hall");
 const auth = require("../middleware/auth");
 const role = require("../middleware/role");
-router.post("/", auth, role("admin"), async (req, res) => {
+router.post("/hall", auth, role("admin"), async (req, res) => {
   try {
     const hall = await Hall.create(req.body);
     res.json(hall);
